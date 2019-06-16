@@ -1,0 +1,27 @@
+---Django related commands---
+
+#to create a superuser
+PS C:\Users\bibhu\Bibhu_Django\new_proj_dj_1>python manage.py create superuser
+
+#to create an app
+PS C:\Users\bibhu\Bibhu_Django\new_proj_dj_1>python manage.py startapp  products
+--after setting.py and products/models.py saved
+PS C:\Users\bibhu\Bibhu_Django\new_proj_dj_1>python manage.py makemigrations
+PS C:\Users\bibhu\Bibhu_Django\new_proj_dj_1>python manage.py migrate
+
+  ##Create the product object using python shell or we can use the admin page gui
+  C:\Users\bibhu\Bibhu_Django\new_proj_dj_1\src\trydjango> python .\manage.py shell
+  Python 3.7.3 (default, Mar 27 2019, 17:13:21) [MSC v.1915 64 bit (AMD64)]
+  Type 'copyright', 'credits' or 'license' for more information
+  IPython 7.4.0 -- An enhanced Interactive Python. Type '?' for help.
+
+  In [1]: from products.models import Product
+
+  In [2]: Product.objects.all()
+  Out[2]: <QuerySet [<Product: Product object (2)>]>
+
+  In [3]: Product.objects.create(Name = 'Book',Price = '$ 30.00')
+  Out[3]: <Product: Product object (3)>
+
+  In [4]: Product.objects.all()
+  Out[4]: <QuerySet [<Product: Product object (2)>, <Product: Product object (3)>]>
