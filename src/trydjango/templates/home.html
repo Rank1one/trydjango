@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Hellow World</h1>
+{{request.user.is_authenticated}}
+<p>This is template</p>
+
+
+<p>User : {{request.user}}</p>
+<p>{{my_text}}</p>
+<p>{{my_number}}</p>
+
+<ul>
+        {% for i in my_list%}
+            <li>{{forloop.counter}} : {{i}}</li>
+        {%endfor%}
+    </ul>
+
+<ul>
+        {% for i in my_list2 %}
+            {% if i >= 90 %}
+                <li>{{i}}: Grade A</li>
+            {% elif i >= 80 %}
+                <li>{{i}}: Grade B</li>
+            {% elif i >= 60 %}
+                <li>{{i|add:10}}: Grade C added grace 10</li>
+            {% elif i >= 35 %}
+                <li>{{i}}: Pass</li>
+            {% else %}
+                <li>{{i}}: Fail</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
+
+
