@@ -77,9 +77,17 @@ WSGI_APPLICATION = 'trydjango.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+    'default':{
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "trydjango",
+        'HOST':"localhost",
+        'PORT':3306,
+        'USER':'Bibhu',
+        'PASSWORD':'1234',
     }
 }
 
