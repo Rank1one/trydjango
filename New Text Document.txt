@@ -25,3 +25,5 @@ PS C:\Users\bibhu\Bibhu_Django\new_proj_dj_1>python manage.py migrate
 
   In [4]: Product.objects.all()
   Out[4]: <QuerySet [<Product: Product object (2)>, <Product: Product object (3)>]>
+
+  
