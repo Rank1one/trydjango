@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>In App : Create Item </h1>
+<form action ='.'  method = 'POST'> {% csrf_token %}
+    {{form.as_p}}
+    <input type='submit' value='Delete'  /><a href="/product">Cancel</a>
+</form>
+{% endblock content %}

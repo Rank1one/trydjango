@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>In App : Create Item </h1>
+<form action ='.'  method = 'POST'> {% csrf_token %}
+    <input type="number" name="pid" value="{{i_d}}" /><input type='submit' value='Retrive' name='Retrive'  />
+    {{form.as_p}}
+    <input type='submit' value='Update' name='Update' /><a href="/product">Cancel</a>
+    <input type="hidden" name="chk" value="{{i_d}}"/>
+</form>
+{% endblock content %}

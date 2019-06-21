@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Product(models.Model):
@@ -7,3 +8,7 @@ class Product(models.Model):
     Description = models.TextField(blank=True,null=True)
     Summary = models.TextField(default='Nada')
     Soldout = models.BooleanField()
+
+    def get_absolute_url(self):
+        # return f"/product/{self.id}"
+        return reverse("products:dynamic_pview",kwargs={'my_id': self.id})

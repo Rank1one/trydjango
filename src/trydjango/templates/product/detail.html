@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Item List</h1>
+<style>table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }</style>
+  <table><tr><th>Name</th><th>Price</th></tr>
+    <tr><td>{{title}}</td><td>{{price}}</td></tr>
+    </table>
+{% endblock content %}
