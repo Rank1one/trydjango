@@ -27,7 +27,8 @@ from pages.views import homepage_view,contact_view,test_tem_view,my_tem_view,use
 urlpatterns = [
     #product urls
     path('products/', include('products.urls')),
-    #end product urls
+    #Blog urls
+    path('Blog/', include('Blog.urls')),
 
     path('admin/', admin.site.urls),
     path('', homepage_view, name='home'),

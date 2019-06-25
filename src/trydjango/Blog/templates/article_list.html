@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{object_list}}
+
+{% for ins in object_list %}
+    <p>{{forloop.counter}} <a href="{{ins.get_absolute_url}}">  {{ins.title}}</a> </p>
+{% endfor %}
+
+{% endblock content %}
